@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto bg-white p-10 rounded-lg shadow-sm">
+    <div class="prose prose-indigo max-w-none">
+        {{ content|safe }}
+    </div>
+</div>
+{% endblock %}

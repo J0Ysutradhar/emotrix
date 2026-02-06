@@ -35,7 +35,8 @@ def run_verification():
     if BlogPost.objects.count() == post_count_start + 1:
         print("PASS: Post created with correct password.")
     else:
-        print("FAIL: Post NOT created with correct password.")
+        print("FAIL:  Post NOT created with correct password.")
+    ##ff
 
     # 4. Test Home View
     response = client.get('/')

@@ -25,12 +25,10 @@ SECRET_KEY = 'django-insecure-#2rd319%!ugaf2r6hboqr1^=w68-gxa#vkif^ciivauob)+jt!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*', 'emotrixlab.onrender.com']
+ALLOWED_HOSTS = ['*', 'emotrix.onrender.com']
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://emotrixlab.onrender.com", 
-    'https://emotrixlab.onrender.com',
-    '*'
+    "https://emotrix.onrender.com", 
 ]
 
 CSRF_COOKIE_SECURE = True

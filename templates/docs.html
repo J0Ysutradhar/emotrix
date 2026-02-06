@@ -8,7 +8,7 @@
 
         <p class="mb-6">
             <strong>Base URL</strong>: <code
-                class="bg-gray-100 px-1 py-0.5 rounded text-red-500">http://127.0.0.1:8000/api/posts/</code>
+                class="bg-gray-100 px-1 py-0.5 rounded text-red-500">https://emotrix.onrender.com/api/posts/</code>
         </p>
 
         <hr class="my-8 border-gray-200">
@@ -25,7 +25,7 @@
 
         <h3 class="text-xl font-medium mb-2">Example Request (curl)</h3>
         <pre
-            class="bg-gray-900 text-gray-100 p-4 rounded-md overflow-x-auto mb-6"><code>curl http://127.0.0.1:8000/api/posts/</code></pre>
+            class="bg-gray-900 text-gray-100 p-4 rounded-md overflow-x-auto mb-6"><code>curl https://emotrix.onrender.com/api/posts/</code></pre>
 
         <h3 class="text-xl font-medium mb-2">Response Format (JSON)</h3>
         <pre class="bg-gray-50 text-gray-900 border border-gray-200 p-4 rounded-md overflow-x-auto mb-6"><code>{
@@ -55,7 +55,7 @@
 
         <h3 class="text-xl font-medium mb-2">Example Request</h3>
         <pre class="bg-gray-900 text-gray-100 p-4 rounded-md overflow-x-auto mb-6"><code># Replace &lt;post_id&gt; with an actual UUID
-curl http://127.0.0.1:8000/api/posts/550e8400-e29b-41d4-a716-446655440000/</code></pre>
+curl https://emotrix.onrender.com/api/posts/550e8400-e29b-41d4-a716-446655440000/</code></pre>
 
         <h3 class="text-xl font-medium mb-2">Response Format</h3>
         <pre class="bg-gray-50 text-gray-900 border border-gray-200 p-4 rounded-md overflow-x-auto mb-6"><code>{
@@ -82,14 +82,14 @@ curl http://127.0.0.1:8000/api/posts/550e8400-e29b-41d4-a716-446655440000/</code
         <h3 class="text-xl font-medium mb-2">Example Request (curl)</h3>
         <div class="mb-4">
             <p class="mb-1 text-sm font-bold text-gray-600">Windows Command Prompt:</p>
-            <pre class="bg-gray-900 text-gray-100 p-4 rounded-md overflow-x-auto"><code>curl -X POST http://127.0.0.1:8000/api/posts/create/ ^
+            <pre class="bg-gray-900 text-gray-100 p-4 rounded-md overflow-x-auto"><code>curl -X POST https://emotrix.onrender.com/api/posts/create/ ^
 -H "Content-Type: application/json" ^
 -d "{\"title\": \"My New API Post\", \"content\": \"This was created via curl!\"}"</code></pre>
         </div>
 
         <div class="mb-6">
             <p class="mb-1 text-sm font-bold text-gray-600">PowerShell:</p>
-            <pre class="bg-gray-900 text-gray-100 p-4 rounded-md overflow-x-auto"><code>Invoke-RestMethod -Uri "http://127.0.0.1:8000/api/posts/create/" `
+            <pre class="bg-gray-900 text-gray-100 p-4 rounded-md overflow-x-auto"><code>Invoke-RestMethod -Uri "https://emotrix.onrender.com/api/posts/create/" `
 -Method Post `
 -ContentType "application/json" `
 -Body (@{title="My New API Post"; content="This was created via PowerShell!"} | ConvertTo-Json)</code></pre>

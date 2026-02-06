@@ -95,26 +95,6 @@ def api_create_post(request):
             return JsonResponse({'error': str(e)}, status=500)
     return JsonResponse({'error': 'Method not allowed'}, status=405)
 
-import markdown
-from django.conf import settings
-import os
 
 def api_docs_view(request):
-    # Path to the api_docs.md file
-    # Assuming it's in the brain folder or project root. 
-    # For this implementation, I'll assume I copied/can read it from the known location or project root.
-    # Let's read from the artifact location I just wrote to.
-    
-    # Correction: Ideally files served by the app should be in the app source.
-    # I will read the artifact path directly for now as requested.
-    
-    docs_path = r"C:\Users\Joy\.gemini\antigravity\brain\ad945414-8c36-4aa0-8819-1e7970581fe6\api_docs.md"
-    
-    try:
-        with open(docs_path, 'r', encoding='utf-8') as f:
-            text = f.read()
-            html = markdown.markdown(text, extensions=['fenced_code', 'codehilite'])
-    except FileNotFoundError:
-        html = "<h1>Documentation not found</h1>"
-
-    return render(request, 'docs.html', {'content': html})
+    return render(request, 'docs.html')

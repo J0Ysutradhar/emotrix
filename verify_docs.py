@@ -21,10 +21,10 @@ def run_verification():
         response = client.get('/docs/')
         if response.status_code == 200:
             content = response.content.decode()
-            if 'Emotrix Blog API Documentation' in content:
-                print("PASS: Docs page is 200 and contains title.")
+            if '<h1 class="text-3xl font-bold mb-4">Emotrix Blog API Documentation</h1>' in content:
+                print("PASS: Docs page is 200 and contains correct HTML title.")
             else:
-                print("FAIL: Docs page found but content missing.")
+                print("FAIL: Docs page found but HTML content mismatch.")
         else:
             print(f"FAIL: Docs page status {response.status_code}")
     except Exception as e:
